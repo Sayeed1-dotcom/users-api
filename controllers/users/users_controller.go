@@ -24,14 +24,14 @@ func CreateUser(c *gin.Context) {
 		return
 	}
 	
-	result, saveErr := services.CreateUser(user)
+	_, saveErr := services.CreateUser(user)
 	if saveErr != nil {
 		//TODO: Handle json error
 		return
 	}
-	c.String(http.StatusNotImplemented, format:"implement me!")
+	c.String(http.StatusNotImplemented, "implement me!")
 }
 
 func GetUser(c *gin.Context) {
-	c.String(http.StatusNotImplemented, format:"implement me!")
+	c.String(http.StatusNotImplemented, "implement me!")
 }
